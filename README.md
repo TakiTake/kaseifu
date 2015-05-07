@@ -1,4 +1,4 @@
-# Kaseifu {<img src="https://travis-ci.org/TakiTake/kaseifu.svg"/>}[http://travis-ci.org/TakiTake/kaseifu] {<img src="https://img.shields.io/codeclimate/github/TakiTake/kaseifu.svg" />}[https://codeclimate.com/github/TakiTake/kaseifu]
+# Kaseifu [<img src="https://travis-ci.org/TakiTake/kaseifu.svg"/>](http://travis-ci.org/TakiTake/kaseifu) [<img src="https://img.shields.io/codeclimate/github/TakiTake/kaseifu.svg" />](https://codeclimate.com/github/TakiTake/kaseifu)
 
 Add useful helper methods to your Rails APP.
 
