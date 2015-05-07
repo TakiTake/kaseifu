@@ -1,5 +1,5 @@
+p $LOAD_PATH
+require 'active_support'
 require 'kaseifu/version'
-
-module Kaseifu
-  # Your code goes here...
-end
+require 'kaseifu/railtie'
+require 'kaseifu/action_view/helpers'
