@@ -37,9 +37,9 @@ describe Kaseifu::ActionView::Helpers::RenderingHelper, type: :helper do
 
         it 'should render "ok" with added locals' do
           expect(helper).to receive(:render)
-            .with({ partial: 'image_path', locals: { image_path: shop_image_path, shop_name: 'd-mall01' } }, {})
+            .with({ partial: 'image_path', locals: { image_path: shop_image_path, shop_name: 'takky' } }, {})
             .and_return('ok')
-          expect(render_if_present(:image_path, in: shop, locals: { shop_name: 'd-mall01' })).to eq 'ok'
+          expect(render_if_present(:image_path, in: shop, locals: { shop_name: 'takky' })).to eq 'ok'
         end
       end
 

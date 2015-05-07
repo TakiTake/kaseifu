@@ -3,31 +3,31 @@ module Kaseifu::ActionView::Helpers
     # Render partial if the given method is present as the receiver's method.
     #
     # For example, something like
-    #   <% if @shop.page_design.shop_top_main_image.present? %>
-    #     <%= render :shop_top_main_image, locals: { shop_top_main_image: @shop.page_design.shop_top_main_image } %>
+    #   <%= render_if_present :shop_image_path, in: @shop %>
+    # same as
+    #   <% if @shop.shop_image_path.present? %>
+    #     <%= render 'shop_image_path', locals: { shop_image_path: @shop.shop_image_path } %>
     #   <% end %>
-    # becomes
-    #   <%= render_if_present :shop_top_main_image, in: @shop.page_design %>
     #
     # You can pass different path of partial
-    #   <%= render_if_present :shop_top_main_image, in: @shop.page_design, partial: 'image' %>
+    #   <%= render_if_present :shop_image_path, in: @shop, partial: 'image' %>
     # same as
-    #   <% if @shop.page_design.shop_top_main_image.present? %>
-    #     <%= render :image, locals: { shop_top_main_image: @shop.page_design.shop_top_main_image } %>
+    #   <% if @shop.shop_image_path.present? %>
+    #     <%= render 'image', locals: { shop_image_path: @shop.shop_image_path } %>
     #   <% end %>
     #
     # You can use different name as a local variable name in the partial
-    #   <%= render_if_present :shop_top_main_image, in: @shop.page_design, as: :shop_image %>
+    #   <%= render_if_present :shop_image_path, in: @shop, as: :shop_image %>
     # same as
-    #   <% if @shop.page_design.shop_top_main_image.present? %>
-    #     <%= render :shop_image, locals: { shop_image: @shop.page_design.shop_top_main_image } %>
+    #   <% if @shop.shop_image_path.present? %>
+    #     <%= render 'shop_image', locals: { shop_image: @shop.shop_image_path } %>
     #   <% end %>
     #
     # You can pass more locals
-    #   <%= render_if_present :shop_top_main_image, in: @shop.page_design, locals: { shop_name: @shop.name } %>
+    #   <%= render_if_present :shop_image_path, in: @shop, locals: { shop_name: @shop.name } %>
     # same as
-    #   <% if @shop.page_design.shop_top_main_image.present? %>
-    #     <%= render :shop_top_main_image, locals: { shop_top_main_image: @shop.page_design.shop_top_main_image, shop_name: @shop.name } %>
+    #   <% if @shop.shop_image_path.present? %>
+    #     <%= render 'shop_image_path', locals: { shop_image_path: @shop.shop_image_path, shop_name: @shop.name } %>
     #   <% end %>
     def render_if_present(method, in: nil, as: nil, **options)
       # "in" is special keyword so need to use local_variable_get to get value

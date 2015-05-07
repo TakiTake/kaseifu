@@ -1,8 +1,6 @@
-# Kaseifu
+# Kaseifu {<img src="https://travis-ci.org/TakiTake/kaseifu.svg"/>}[http://travis-ci.org/TakiTake/kaseifu] {<img src="https://img.shields.io/codeclimate/github/TakiTake/kaseifu.svg" />}[https://codeclimate.com/github/TakiTake/kaseifu]
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kaseifu`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Add useful helper methods to your Rails APP.
 
 ## Installation
 
@@ -22,7 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### render\_if\_present
+
+Render partial if the given method is present as the receiver's method.
+
+For example, something like
+
+```erb
+<%= render_if_present :shop_image_path, in: @shop %>
+```
+
+same as
+
+```erb
+<% if @shop.shop_image_path.present? %>
+  <%= render 'shop_image_path', locals: { shop_image_path: @shop.shop_image_path } %>
+<% end %>
+```
 
 ## Development
 
