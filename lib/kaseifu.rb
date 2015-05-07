@@ -1,4 +1,3 @@
-p $LOAD_PATH
 require 'active_support'
 require 'kaseifu/version'
 require 'kaseifu/railtie'
