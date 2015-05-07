@@ -2,6 +2,8 @@
 
 Add useful helper methods to your Rails APP.
 
+kaseifu works on ruby 2.1 or higher.
+
 ## Installation
 
 Add this line to your application's Gemfile:
